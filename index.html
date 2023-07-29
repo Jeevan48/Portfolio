@@ -13,13 +13,16 @@
         * {
             margin: 0;
             padding: 0;
+            /* position: absolute; */
         }
 
         body {
             background-color: #bcb5e4;
             color: black;
             font-family: 'Poppins', sans-serif;
-            ;
+            border: 4px solid black;
+            height: 100%;
+
 
         }
 
@@ -27,7 +30,7 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            height: 80px;
+            height: 10vh;
             background-color: rgb(25, 21, 53);
             color: white;
         }
@@ -42,6 +45,17 @@
             margin: 0 23px;
         }
 
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+
+            color: #bcb5e4;
+            font-size: 1.01rem;
+        }
+
         .left {
             font-size: 1.5rem;
         }
@@ -49,7 +63,9 @@
         .first {
             display: flex;
             justify-content: space-around;
-            margin: 63px 0;
+            /* margin: 63px 0 0 0;*/
+            padding: 63px 0 0 0;
+            /* height: 90vh; */
         }
 
         .first>div {
@@ -59,15 +75,37 @@
         .leftsection {
 
             /* background-color: blanchedalmond; */
+            font-family: Georgia;
             font-size: 3rem;
-            margin: 20px;
+            /* margin: 20px 0 20px 0; */
+            padding: 20px 0 20px 0;
 
+        }
+
+        .rightsection {
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .rightsection img {
             width: 80%;
-            margin: 50ox 0;
+            margin: 63px 0 0 0;
+            padding: 0;
 
+        }
+
+        .n1 {
+            font-family: Georgia;
+            font-size: 3.5rem;
+            color: blueviolet;
+        }
+
+        img {
+            border-bottom: 2px solid #000;
+        }
+
+        #element {
+            color: blueviolet;
         }
     </style>
 </head>
@@ -78,10 +116,10 @@
             <nav class="left">Jeevan's Portfolio</nav>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About me</li>
-                    <li>Projects</li>
-                    <li>Certifications</li>
+                    <li><a href="about.html" target="_blank">About Me</a></li>
+                    <li><a href="profie.html" target="_blank">Profiles</a></li>
+                    <li><a href="/">Projects & Certifications</a></li>
+                    <!-- <li><a href="/">Certifications</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -90,14 +128,25 @@
         <section class="first">
             <div class="leftsection">
                 Hello,<br>
-                <div class="n1">Jeevan Thote</div>here..
+                <span class="n1">Jeevan Thote</span><br>here..<br>I am<br>
+                <span id="element"></span>
             </div>
 
             <div class="rightsection">
                 <img src="img1.png">
             </div>
         </section>
+        <section class="second">
+
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Computer <br>Engineering <br>student..', 'Front End <br> Developer..', 'Passionate <br>learner...'],
+            typeSpeed: 50,
+        });
+    </script>
 </body>
 
 </html>
